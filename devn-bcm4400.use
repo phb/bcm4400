@@ -1,0 +1,23 @@
+%C Driver(1.1) for BROADCOM 440x compatible Ethernet controllers
+
+Syntax:
+  io-net -d bcm4400 [option[,option ...]] ... &
+
+Options (to override autodetected defaults):
+  speed=10|100        Media data rate.
+  duplex=0|1          Half (0) or full (1) duplex mode. 
+  pci=0xXXXX          PCI index of the controller. 
+  did=0xXXXX          PCI device id. 
+  vid=0xXXXX          PCI vendor id. 
+  mac=XXXXXXXXXXXX    MAC address of the controller. 
+  verbose             Be verbose. (0-5) 
+  promiscuous         Enable promiscuous mode.
+  nomulticast         Disable multicast support.
+  transmit=num        Set the number of tx descriptors. Default is 15.
+  receive=num         Set the number of rx descriptors. Default is 30.
+
+Examples:
+  # Start io-net using the BROADCOM 440x driver and the full TCP/IP stack: 
+  io-net -d bcm4400 -p tcpip
+  ifconfig en0 10.184
+

@@ -1,0 +1,10 @@
+Broadcom 440X driver for QNX/io-net
+
+Place this driver in your net ddk directory ddk-6.2.1/network/src/hardware/devn/
+then run make in the basedirectory of the DDK and it should compile. 
+
+Copy the x86/dll/bcm4400.so to /lib/dll/devn-bcm4400.so and start it as the usage message states ('use /lib/dll/devn-bcm4400.so')
+
+The modifications in this driver from the original Linux driver is Copyright Johan Bjoerk <phearbear@home.se>
+
+
